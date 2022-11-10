@@ -1,5 +1,5 @@
 {
-    "chatbot_token": "MTA0MDI4Mjc3ODUwMTEyODE5Mg.GY4Pg2.mPtPor_y1VUrwEEkIAQv3BgBTzr67jHFpvR0pk",
+    "chatbot_token": "",
     "url" : "https://free-nba.p.rapidapi.com/players",
     "headers" : {
         "X-RapidAPI-Key": "4152d40bf0msh5e6d28c490236a3p1cbac9jsn717fd13ed304",
