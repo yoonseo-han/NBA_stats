@@ -2,6 +2,10 @@ const {Client,Events, GatewayIntentBits} = require('discord.js');
 const config = require('./config.json');
 const TOKEN = config.chatbot_token;
 
+// //To bring result from Stats.py
+// const spawn = require("child_process").spawn;
+// const pythonProcess = spawn('python',['./Stats.py']);
+
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
@@ -10,8 +14,20 @@ client.on("ready", () =>{
     console.log(`Logged in as ${client.user.tag}!`);
 });
 client.on("messageCreate", (message) => {
-    if (message.content.substring(0, 6) === "!Teams") {
-        message.channel.send("Which team do you want to know?"); //reply if message has "!" as first character
+    if (message.content.substring(0, 6).toLowerCase() === "!team") {
+        //Output information of team id that is input after !Team
+        message.channel.send(`Information of your following team`);
+        //To bring result from Stats.py into discord
+
+        const spawn = require("child_process").spawn;
+        const pythonProcess = spawn('python',['./Stats.py']);
+        pythonProcess.stdout.on('data', (data) => {
+            message.channel.send(`${data}`);
+        })
+    }
+
+    else if (message.content.substring(0,8).toLowerCase() == "!Player") {
+        message.channel.send(`The following player`);
     }
 });
 

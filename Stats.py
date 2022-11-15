@@ -1,6 +1,7 @@
 import requests
 import discord
 import json
+import sys
 
 # Function to format received json file
 def jprint(obj) :
@@ -19,4 +20,5 @@ querystring = {"id":"2"}
 response = requests.request("GET", STAT_URL + ('teams'), headers=headers, params=querystring)
 
 
-jprint(response.json())
+print(response.json())
+sys.stdout.flush()
