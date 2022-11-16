@@ -20,5 +20,5 @@ querystring = {"id":"2"}
 response = requests.request("GET", STAT_URL + ('teams'), headers=headers, params=querystring)
 
 
-print(response.json())
+print(response)
 sys.stdout.flush()

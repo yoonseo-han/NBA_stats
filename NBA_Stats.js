@@ -22,7 +22,11 @@ client.on("messageCreate", (message) => {
         const spawn = require("child_process").spawn;
         const pythonProcess = spawn('python',['./Stats.py']);
         pythonProcess.stdout.on('data', (data) => {
-            message.channel.send(`${data}`);
+            //TASK: HOW TO PARSE THE RECEIVED JSON OBJECT!!!!!!
+            var parsed_data = JSON.parse(data);
+            //console.log(`${data['results']}`);
+            console.log(`${data}`);
+            //message.channel.send(`${data.results}`);
         })
     }
 
