@@ -9,7 +9,7 @@
   "version": "1.0.0",
   "main": "NBA_Stats.js",
   "scripts": {
-    "start": "node NBA_Stats.js"
+    "start": "nodemon NBA_Stats.js"
   },
   "repository": {
     "type": "git",

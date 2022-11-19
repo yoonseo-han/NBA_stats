@@ -6,9 +6,9 @@
 - Input NBA team to get ranking <br>
 - REST API structure 
 
-## Rapid API
+## Rapid API URL
 
-URL: https://rapidapi.com/theapiguy/api/free-nba/
+URL: https://rapidapi.com/api-sports/api/api-nba/
 
 ## References
 

@@ -19,6 +19,6 @@ querystring = {"id":"2"}
 
 response = requests.request("GET", STAT_URL + ('teams'), headers=headers, params=querystring)
 
-
-print(response)
+# Transform response to text form and send to js server
+print(response.text)
 sys.stdout.flush()
