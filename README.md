@@ -3,7 +3,8 @@
 ## Main functions
 
 - Input NBA player name and get their recent game score <br>
-- Input NBA team to get ranking
+- Input NBA team to get ranking <br>
+- REST API structure 
 
 ## Rapid API
 
