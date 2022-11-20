@@ -26,6 +26,7 @@ client.on("messageCreate", (message) => {
             var parsed_data = JSON.parse(data);
             //console.log(`${data['results']}`);
             console.log(parsed_data['response'][0]['name']);
+            message.channel.send(`Team name: ${parsed_data['response'][0]['name']}`);
             //message.channel.send(`${data.results}`);
         })
     }
