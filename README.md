@@ -23,3 +23,7 @@ https://brainbackdoor.tistory.com/53
 ### NBA Stats
 https://towardsdatascience.com/attempting-to-predict-the-result-of-an-nba-game-before-you-could-finish-watching-the-first-half-4a1a97cfa31b <br>
 https://github.com/seemethere/nba_py/wiki/stats.nba.com-Endpoint-Documentation
+
+### TODO
+- Update Team info Excel file <br>
+- Add functionality: When type city name return with : Team name, logo, division info
