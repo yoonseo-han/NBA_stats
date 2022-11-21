@@ -1,6 +1,7 @@
 const {Client,Events, GatewayIntentBits} = require('discord.js');
 const config = require('./config.json');
 const TOKEN = config.chatbot_token;
+const {Team_Stats} = require('./Team_stats.js');
 
 // //To bring result from Stats.py
 // const spawn = require("child_process").spawn;
@@ -14,23 +15,19 @@ client.on("ready", () =>{
     console.log(`Logged in as ${client.user.tag}!`);
 });
 client.on("messageCreate", (message) => {
-    if (message.content.substring(0, 6).toLowerCase() === "!team") {
+
+    let commands = message.content.split(" ");
+
+    if (commands[0].toLowerCase() === "!team") {
         //Output information of team id that is input after !Team
         message.channel.send(`Information of your following team`);
-        //To bring result from Stats.py into discord
 
-        const spawn = require("child_process").spawn;
-        const pythonProcess = spawn('python',['./Stats.py']);
-        pythonProcess.stdout.on('data', (data) => {
-            //Parse the received text to JSON object
-            var parsed_data = JSON.parse(data);
-            //console.log(`${data['results']}`)
-            console.log(parsed_data['response'][0]);
-            //console.log(parsed_data['response'][0]['name']);
-            message.channel.send(`Team name: ${parsed_data['response'][0]['name']}`);
-            message.channel.send(`Team Logo: ${parsed_data['response'][0]['logo']}`);
-            //message.channel.send(`${data.results}`);
-        })
+        //Send city name to Team_stats.py
+        let cityName = JSON.stringify(commands[1]);
+        console.log(cityName);
+
+        const data = Team_Stats
+        console.log(data);
     }
 
     else if (message.content.substring(0,8).toLowerCase() == "!Player") {

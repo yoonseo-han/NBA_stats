@@ -25,5 +25,4 @@ https://towardsdatascience.com/attempting-to-predict-the-result-of-an-nba-game-b
 https://github.com/seemethere/nba_py/wiki/stats.nba.com-Endpoint-Documentation
 
 ### TODO
-- Update Team info Excel file <br>
 - Add functionality: When type city name return with : Team name, logo, division info
