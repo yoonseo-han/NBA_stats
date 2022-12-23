@@ -7,13 +7,14 @@ const {Team_Stats} = require('./Team_stats.js');
 // const spawn = require("child_process").spawn;
 // const pythonProcess = spawn('python',['./Stats.py']);
 
-
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
-client.on("ready", () =>{
+client.on("message", () =>{
     console.log("The AI bot is online"); //message when bot is online
     console.log(`Logged in as ${client.user.tag}!`);
 });
+
+
 client.on("messageCreate", (message) => {
 
     let commands = message.content.split(" ");
