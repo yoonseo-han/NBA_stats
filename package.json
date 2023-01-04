@@ -4,14 +4,16 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "fetch": "^1.1.0",
+    "node-fetch": "^3.3.0",
     "request": "^2.88.2"
   },
   "name": "nba_stats",
   "description": "## Main functions",
   "version": "1.0.0",
-  "main": "NBA_Stats.js",
+  "main": "App.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon NBA_Stats.js"
+    "start": "nodemon App.js"
   },
   "repository": {
     "type": "git",
